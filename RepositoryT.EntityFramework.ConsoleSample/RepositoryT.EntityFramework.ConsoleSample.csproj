@@ -7,8 +7,8 @@
     <ProjectGuid>{20DEFB49-92C1-46BF-8374-56A9949AE7EF}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RepoT.EF.ConsoleSample</RootNamespace>
-    <AssemblyName>RepoT.EF.ConsoleSample</AssemblyName>
+    <RootNamespace>RepositoryT.EntityFramework.ConsoleSample</RootNamespace>
+    <AssemblyName>RepositoryT.EntityFramework.ConsoleSample</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -35,8 +35,8 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="RepoT">
-      <HintPath>..\TempLib\RepoT.dll</HintPath>
+    <Reference Include="RepositoryT">
+      <HintPath>..\TempLib\RepositoryT.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -56,7 +56,7 @@
     <Compile Include="UserEntityRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RepoT.EF\RepoT.EF.csproj">
+    <ProjectReference Include="..\RepositoryT.EntityFramework\RepositoryT.EntityFramework.csproj">
       <Project>{9B449064-17A2-47F3-8BFD-BE93637DE794}</Project>
       <Name>RepoT.EF</Name>
     </ProjectReference>

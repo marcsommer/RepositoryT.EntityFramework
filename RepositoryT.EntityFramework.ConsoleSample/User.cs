@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace RepoT.EF.ConsoleSample
+namespace RepositoryT.EntityFramework.ConsoleSample
 {
     public class User
     {

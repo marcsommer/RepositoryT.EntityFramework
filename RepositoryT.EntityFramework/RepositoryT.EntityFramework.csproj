@@ -7,8 +7,8 @@
     <ProjectGuid>{9B449064-17A2-47F3-8BFD-BE93637DE794}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RepoT.EF</RootNamespace>
-    <AssemblyName>RepoT.EF</AssemblyName>
+    <RootNamespace>RepositoryT.EntityFramework</RootNamespace>
+    <AssemblyName>RepositoryT.EntityFramework</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,8 +33,8 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="RepoT">
-      <HintPath>..\TempLib\RepoT.dll</HintPath>
+    <Reference Include="RepositoryT">
+      <HintPath>..\TempLib\RepositoryT.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />

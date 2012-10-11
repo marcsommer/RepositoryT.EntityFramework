@@ -1,9 +1,9 @@
 ﻿using System;
-using RepoT.Infrastructure;
+using RepositoryT.Infrastructure;
 
-namespace RepoT.EF
+namespace RepositoryT.EntityFramework
 {
-    public class DefaultDataContextFactory<TContext> : CustomDisposable, IDataContextFactory<TContext> where TContext : class, IDisposable, new()
+    public class DefaultDataContextFactory<TContext> : IDataContextFactory<TContext> where TContext : class, IDisposable, new()
     {
         private TContext _dataContext;
 
@@ -16,7 +16,7 @@ namespace RepoT.EF
 
         #endregion
 
-        protected override void DisposeCore()
+        public void Dispose()
         {
             if (_dataContext != null)
                 _dataContext.Dispose();

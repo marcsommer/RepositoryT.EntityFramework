@@ -1,6 +1,6 @@
 using System.Data.Entity;
 
-namespace RepoT.EF.ConsoleSample
+namespace RepositoryT.EntityFramework.ConsoleSample
 {
     public class RepoTContext : DbContext, IEFDataContext
     {

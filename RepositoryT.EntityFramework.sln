@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoT.EF", "RepoT.EF\RepoT.EF.csproj", "{9B449064-17A2-47F3-8BFD-BE93637DE794}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryT.EntityFramework", "RepositoryT.EntityFramework\RepositoryT.EntityFramework.csproj", "{9B449064-17A2-47F3-8BFD-BE93637DE794}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoT.EF.ConsoleSample", "RepoT.EF.ConsoleSample\RepoT.EF.ConsoleSample.csproj", "{20DEFB49-92C1-46BF-8374-56A9949AE7EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryT.EntityFramework.ConsoleSample", "RepositoryT.EntityFramework.ConsoleSample\RepositoryT.EntityFramework.ConsoleSample.csproj", "{20DEFB49-92C1-46BF-8374-56A9949AE7EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

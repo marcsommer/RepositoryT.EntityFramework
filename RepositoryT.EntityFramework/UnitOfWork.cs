@@ -1,7 +1,7 @@
 ﻿using System;
-using RepoT.Infrastructure;
+using RepositoryT.Infrastructure;
 
-namespace RepoT.EF
+namespace RepositoryT.EntityFramework
 {
     public class UnitOfWork<TContext> : UnitOfWorkBase<TContext> where TContext : class, IDisposable, IEFDataContext, new()
     {

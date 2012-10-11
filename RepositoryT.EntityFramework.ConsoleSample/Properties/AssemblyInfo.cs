@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RepoT.EF.ConsoleSample")]
+[assembly: AssemblyTitle("RepositoryT.EntityFramework.ConsoleSample")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("RepoT.EF.ConsoleSample")]
+[assembly: AssemblyCompany("ziyasal")]
+[assembly: AssemblyProduct("RepositoryT.EntityFramework.ConsoleSample")]
 [assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

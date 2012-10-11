@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
-namespace RepoT.EF
+namespace RepositoryT.EntityFramework
 {
     public interface IEFDataContext
     {

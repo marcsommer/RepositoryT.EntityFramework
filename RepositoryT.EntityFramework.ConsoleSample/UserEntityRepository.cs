@@ -1,6 +1,6 @@
-using RepoT.Infrastructure;
+using RepositoryT.Infrastructure;
 
-namespace RepoT.EF.ConsoleSample
+namespace RepositoryT.EntityFramework.ConsoleSample
 {
     public class UserEntityRepository : EntityRepository<User, RepoTContext>, IUserRepository
     {
