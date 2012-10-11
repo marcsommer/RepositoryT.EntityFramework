@@ -1,4 +1,7 @@
-﻿namespace RepoT.EF
+﻿using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+
+namespace RepoT.EF
 {
     public interface IEFDataContext
     {

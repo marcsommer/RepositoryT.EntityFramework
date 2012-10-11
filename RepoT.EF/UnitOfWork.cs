@@ -1,11 +1,12 @@
 ﻿using System;
+using RepoT.Infrastructure;
 
 namespace RepoT.EF
 {
     public class UnitOfWork<TContext> : UnitOfWorkBase<TContext> where TContext : class, IDisposable, IEFDataContext, new()
     {
 
-        public UnitOfWork(IDatabaseFactory<TContext> databaseFactory)
+        public UnitOfWork(IDataContextFactory<TContext> databaseFactory)
             : base(databaseFactory)
         {
 

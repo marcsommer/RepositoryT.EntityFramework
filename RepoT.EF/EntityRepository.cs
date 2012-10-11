@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using RepoT.Infrastructure;
 
 namespace RepoT.EF
 {
@@ -11,7 +14,7 @@ namespace RepoT.EF
     {
         private readonly IDbSet<T> _dbset;
 
-        protected EntityRepository(IDatabaseFactory<TContext> databaseFactory) :
+        protected EntityRepository(IDataContextFactory<TContext> databaseFactory) :
             base(databaseFactory)
         {
             _dbset = DataContext.Set<T>();
