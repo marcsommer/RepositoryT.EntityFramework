@@ -1,4 +1,4 @@
-RepoT.EF
+RepositoryT.EntityFramework
 ========
 
-Generic Repository Pattern base with UnitOfWork for Entity Framework
+Generic Repository Pattern and UnitOfWork implementation with base classes.
