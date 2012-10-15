@@ -1,4 +1,4 @@
 RepositoryT.EntityFramework
 ========
 
-Generic Repository Pattern and UnitOfWork implementation with base classes.
+Generic Repository and Pattern UnitOfWork implementation with base classes.
