@@ -1,3 +1,5 @@
+using System;
+using System.Linq.Expressions;
 using RepositoryT.Infrastructure;
 
 namespace RepositoryT.EntityFramework.ConsoleSample
@@ -7,21 +9,6 @@ namespace RepositoryT.EntityFramework.ConsoleSample
         public UserEntityRepository(IDataContextFactory<RepoTContext> databaseFactory)
             : base(databaseFactory)
         {
-        }
-
-        public bool Add(User entity)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Delete(int id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Delete(string id)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

@@ -25,6 +25,14 @@ namespace RepositoryT.EntityFramework
             _dbset.Add(entity);
         }
 
+        public virtual void Add(IEnumerable<T> entities)
+        {
+            foreach (T entity in entities)
+            {
+                _dbset.Add(entity);
+            }
+        }
+
         public virtual void Update(T entity)
         {
             _dbset.Attach(entity);
@@ -41,6 +49,18 @@ namespace RepositoryT.EntityFramework
             IEnumerable<T> objects = Enumerable.AsEnumerable<T>(_dbset.Where(@where));
             foreach (T obj in objects)
                 _dbset.Remove(obj);
+        }
+        public virtual void Delete(int id)
+        {
+        }
+
+        public virtual void Delete(string id)
+        {
+        }
+
+        public virtual T Get(Expression<Func<T, bool>> @where)
+        {
+            return _dbset.Where(@where).FirstOrDefault();
         }
 
         public virtual T GetById(long id)
@@ -63,11 +83,6 @@ namespace RepositoryT.EntityFramework
             return Enumerable.ToList<T>(_dbset.Where(@where));
         }
 
-        public virtual T Get(Expression<Func<T, bool>> where)
-        {
-            return Queryable.FirstOrDefault<T>(_dbset.Where(@where));
-        }
-
         public virtual IQueryable<T> IncludeSubSets(params Expression<Func<T, object>>[] includeProperties)
         {
             IQueryable<T> query = _dbset;
@@ -77,5 +92,6 @@ namespace RepositoryT.EntityFramework
             }
             return query;
         }
+
     }
 }

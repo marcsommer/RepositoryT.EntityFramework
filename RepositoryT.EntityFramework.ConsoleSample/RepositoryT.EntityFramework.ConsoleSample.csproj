@@ -35,8 +35,9 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="RepositoryT">
-      <HintPath>..\packages\RepositoryT.0.1.0\lib\RepositoryT.dll</HintPath>
+    <Reference Include="RepositoryT, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RepositoryT.0.2.0\lib\RepositoryT.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -60,6 +61,9 @@
       <Project>{9b449064-17a2-47f3-8bfd-be93637de794}</Project>
       <Name>RepositoryT.EntityFramework</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
