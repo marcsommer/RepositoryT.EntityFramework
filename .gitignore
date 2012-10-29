@@ -1,6 +1,7 @@
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 [Bb]in/
 [Oo]bj/
+[Aa]pp_Data/
 
 # mstest test results
 TestResults
@@ -60,8 +61,8 @@ _ReSharper*
 # Installshield output folder 
 [Ee]xpress
 
-# Nuget Packages 
-[Pp]ackages
+# Nuget Packages folder 
+[Pp]ackages 
 
 # DocProject is a documentation generator add-in
 DocProject/buildhelp/

@@ -10,7 +10,7 @@ namespace RepositoryT.EntityFramework
 {
     public class SelfCommittedEntityRepository<T, TContext> : EntityRepository<T, TContext>
         where T : class
-        where TContext : class, IDisposable, IEFDataContext
+        where TContext : DbContext, IDisposable
     {
         private readonly IDbSet<T> _dbset;
 
