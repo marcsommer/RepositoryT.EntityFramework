@@ -2,7 +2,7 @@ using System.Data.Entity;
 
 namespace RepositoryT.EntityFramework.ConsoleSample
 {
-    public class RepoTContext : DbContext
+    public class SampleDataContext : DbContext, IDbContext
     {
         public DbSet<User> Users { get; set; }
     }
