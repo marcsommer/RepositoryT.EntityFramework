@@ -6,7 +6,7 @@ using System.Data.Entity.Validation;
 
 namespace RepositoryT.EntityFramework
 {
-    public interface IDbContext
+    public interface IDbContext : IDisposable
     {
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
         DbSet Set(Type entityType);

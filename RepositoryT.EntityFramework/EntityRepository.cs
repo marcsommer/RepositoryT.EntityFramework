@@ -10,7 +10,7 @@ namespace RepositoryT.EntityFramework
 {
     public abstract class EntityRepository<T, TContext> : RepositoryBase<TContext>
         where T : class
-        where TContext : DbContext, IDisposable
+        where TContext : class, IDbContext, IDisposable
     {
         private readonly IDbSet<T> _dbset;
 
