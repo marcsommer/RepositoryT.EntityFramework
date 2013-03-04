@@ -22,7 +22,7 @@ namespace RepositoryT.EntityFramework.AutofacConsoleSample
             var builder = new ContainerBuilder();
 
             builder.Register<IDataContextFactory<SampleDataContext>>(
-                x => new DefaultDataContextFactory<SampleDataContext>()).InstancePerDependency();
+                x => new DefaultDataContextFactory<SampleDataContext>()).InstancePerLifetimeScope();
             builder.Register<IUserRepository>(x => new UserEntityRepository(x.Resolve<IDataContextFactory<SampleDataContext>>())).SingleInstance();
             builder.Register<IUnitOfWork>(x => new UnitOfWork<SampleDataContext>(x.Resolve<IDataContextFactory<SampleDataContext>>())).SingleInstance();
             builder.Register<IUserService>(x => new UserService(x.Resolve<IUnitOfWork>(), x.Resolve<IUserRepository>())).SingleInstance();
@@ -37,7 +37,7 @@ namespace RepositoryT.EntityFramework.AutofacConsoleSample
                              {
                                  Email = "someone@somehost.com",
                                  FirstName = "Ziyasal",
-                                 LastName = "XYZ"
+                                 LastName = "Doe"
                              };
             userService.AddUser(userToCreate1);
             User userToCreate2 = new User

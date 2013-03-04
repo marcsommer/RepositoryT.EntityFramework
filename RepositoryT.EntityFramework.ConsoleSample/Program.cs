@@ -19,7 +19,7 @@ namespace RepositoryT.EntityFramework.ConsoleSample
                                {
                                    Email = "someone@somehost.com",
                                    FirstName = "Ziyasal",
-                                   LastName = "XYZ"
+                                   LastName = "Doe"
                                });
             userService.AddUser(new User
                                 {
