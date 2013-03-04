@@ -6,7 +6,7 @@ namespace RepositoryT.EntityFramework.AutofacConsoleSample
 {
     class Program
     {
-        private static IContainer _container;
+        private static IContainer CONTAINER;
 
         static Program()
         {
@@ -17,17 +17,18 @@ namespace RepositoryT.EntityFramework.AutofacConsoleSample
         {
             var builder = new ContainerBuilder();
 
-            builder.Register<IDataContextFactory<SampleDataContext>>(x => new DefaultDataContextFactory<SampleDataContext>()).SingleInstance();
+            builder.Register<IDataContextFactory<SampleDataContext>>(
+                x => new DefaultDataContextFactory<SampleDataContext>()).InstancePerDependency();
             builder.Register<IUserRepository>(x => new UserEntityRepository(x.Resolve<IDataContextFactory<SampleDataContext>>())).SingleInstance();
             builder.Register<IUnitOfWork>(x => new UnitOfWork<SampleDataContext>(x.Resolve<IDataContextFactory<SampleDataContext>>())).SingleInstance();
             builder.Register<IUserService>(x => new UserService(x.Resolve<IUnitOfWork>(), x.Resolve<IUserRepository>())).SingleInstance();
-            _container = builder.Build();
+            CONTAINER = builder.Build();
         }
 
         static void Main()
         {
 
-            IUserService userService = _container.Resolve<IUserService>();
+            IUserService userService = CONTAINER.Resolve<IUserService>();
             User userToCreate1 = new User
                              {
                                  Email = "someone@somehost.com",
