@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
+using RepositoryT.EntityFramework.Extensions;
 using RepositoryT.Infrastructure;
 
 namespace RepositoryT.EntityFramework.ConsoleSample
@@ -26,7 +29,45 @@ namespace RepositoryT.EntityFramework.ConsoleSample
                 Console.WriteLine("{0} {1}", user.FirstName, user.LastName);
             }
 
+            TestDynamicMethods(userService);
+
             Console.Read();
+        }
+
+        private static void TestDynamicMethods(UserService userService)
+        {
+            Func<User, object> selector = product => (object)new { product.Id, product.Email };
+            Expression<Func<User, object>> selectorExp = product => (object)new { product.Id, product.Email };
+            Func<object, UserBrief> maker = product =>
+            {
+                UserBrief brief = new UserBrief();
+                brief.Id = product.GetPropertyValue<int>(o => brief.Id);
+                brief.Email = product.GetPropertyValue<string>(o => brief.Email);
+                return brief;
+            };
+
+            TestWithFuncParam(userService, selector, maker);
+            TestWithExpressionParam(userService, selectorExp, maker);
+        }
+
+        private static void TestWithFuncParam(UserService userService, Func<User, object> selector, Func<object, UserBrief> maker)
+        {
+            List<UserBrief> projectBriefs = userService.GetDynamic(selector, maker);
+
+            foreach (var projectBrief in projectBriefs)
+            {
+                Console.WriteLine("Id: {0}, Title: {1}", projectBrief.Id, projectBrief.Email);
+            }
+        }
+
+        private static void TestWithExpressionParam(UserService userService, Expression<Func<User, object>> selectorExp, Func<object, UserBrief> maker)
+        {
+            List<UserBrief> projectBriefsWithExp = userService.GetDynamic(selectorExp, maker);
+
+            foreach (var projectBrief in projectBriefsWithExp)
+            {
+                Console.WriteLine("Id: {0}, Title: {1}", projectBrief.Id, projectBrief.Email);
+            }
         }
 
         private static UserService GetService()

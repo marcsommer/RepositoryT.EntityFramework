@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="DefaultContextFactory.cs" />
     <Compile Include="EntityRepository.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Helper\ExpressionHelper.cs" />
     <Compile Include="IDbContext.cs" />
     <Compile Include="IEFRepository.cs" />

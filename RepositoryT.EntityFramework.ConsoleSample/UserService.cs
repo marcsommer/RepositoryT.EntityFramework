@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using RepositoryT.Infrastructure;
 
 namespace RepositoryT.EntityFramework.ConsoleSample
@@ -26,6 +28,16 @@ namespace RepositoryT.EntityFramework.ConsoleSample
         public IEnumerable<User> GetAll()
         {
             return _userRepository.GetAll();
+        }
+
+        public List<UserBrief> GetDynamic(Func<User, object> selector, Func<object, UserBrief> maker)
+        {
+            return _userRepository.GetDynamic(selector, maker);
+        }
+
+        public List<UserBrief> GetDynamic(Expression<Func<User, object>> selector, Func<object, UserBrief> maker)
+        {
+            return _userRepository.GetDynamic(selector, maker);
         }
     }
 }
