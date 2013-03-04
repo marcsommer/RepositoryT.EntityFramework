@@ -93,5 +93,14 @@ namespace RepositoryT.EntityFramework
             return query;
         }
 
+        public List<TDynamicEntity> GetDynamic<TTable, TDynamicEntity>(Expression<Func<TTable, object>> selector, Func<object, TDynamicEntity> maker) where TTable : class
+        {
+            return DataContext.Set<TTable>().Select(selector.Compile()).Select(maker).ToList();
+        }
+
+        public List<TDynamicEntity> GetDynamic<TTable, TDynamicEntity>(Func<TTable, object> selector, Func<object, TDynamicEntity> maker) where TTable : class
+        {
+            return DataContext.Set<TTable>().Select(selector).Select(maker).ToList();
+        }
     }
 }
