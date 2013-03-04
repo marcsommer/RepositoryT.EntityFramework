@@ -1,6 +1,7 @@
 using System.Data.Entity;
+using RepositoryT.EntityFramework.SimpleBusiness.Entities;
 
-namespace RepositoryT.EntityFramework.ConsoleSample
+namespace RepositoryT.EntityFramework.SimpleBusiness
 {
     public class SampleDataContext : DbContext, IDbContext
     {

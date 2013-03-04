@@ -1,12 +1,16 @@
 ﻿using System;
 using Autofac;
+using RepositoryT.EntityFramework.SimpleBusiness;
+using RepositoryT.EntityFramework.SimpleBusiness.Entities;
+using RepositoryT.EntityFramework.SimpleBusiness.Repository;
+using RepositoryT.EntityFramework.SimpleBusiness.Service;
 using RepositoryT.Infrastructure;
 
 namespace RepositoryT.EntityFramework.AutofacConsoleSample
 {
     class Program
     {
-        private static IContainer CONTAINER;
+        private static IContainer IoC;
 
         static Program()
         {
@@ -22,13 +26,13 @@ namespace RepositoryT.EntityFramework.AutofacConsoleSample
             builder.Register<IUserRepository>(x => new UserEntityRepository(x.Resolve<IDataContextFactory<SampleDataContext>>())).SingleInstance();
             builder.Register<IUnitOfWork>(x => new UnitOfWork<SampleDataContext>(x.Resolve<IDataContextFactory<SampleDataContext>>())).SingleInstance();
             builder.Register<IUserService>(x => new UserService(x.Resolve<IUnitOfWork>(), x.Resolve<IUserRepository>())).SingleInstance();
-            CONTAINER = builder.Build();
+            IoC = builder.Build();
         }
 
         static void Main()
         {
 
-            IUserService userService = CONTAINER.Resolve<IUserService>();
+            IUserService userService = IoC.Resolve<IUserService>();
             User userToCreate1 = new User
                              {
                                  Email = "someone@somehost.com",
@@ -52,4 +56,5 @@ namespace RepositoryT.EntityFramework.AutofacConsoleSample
             Console.Read();
         }
     }
+
 }

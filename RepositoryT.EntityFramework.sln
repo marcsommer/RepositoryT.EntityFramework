@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{ABBA9A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryT.EntityFramework.AutofacConsoleSample", "RepositoryT.EntityFramework.AutofacConsoleSample\RepositoryT.EntityFramework.AutofacConsoleSample.csproj", "{4DD5CE5F-DA28-4892-B41F-7F5EBF366FE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryT.EntityFramework.SimpleBusiness", "RepositoryT.EntityFramework.SimpleBusiness\RepositoryT.EntityFramework.SimpleBusiness.csproj", "{60386815-8F74-41CC-9A10-76FCADAF60F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryT.EntityFramework.Test", "RepositoryT.EntityFramework.Test\RepositoryT.EntityFramework.Test.csproj", "{B9E3CA17-760F-4C7C-A7CB-753F8982AFC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,14 @@ Global
 		{4DD5CE5F-DA28-4892-B41F-7F5EBF366FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DD5CE5F-DA28-4892-B41F-7F5EBF366FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DD5CE5F-DA28-4892-B41F-7F5EBF366FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60386815-8F74-41CC-9A10-76FCADAF60F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60386815-8F74-41CC-9A10-76FCADAF60F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60386815-8F74-41CC-9A10-76FCADAF60F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60386815-8F74-41CC-9A10-76FCADAF60F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9E3CA17-760F-4C7C-A7CB-753F8982AFC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E3CA17-760F-4C7C-A7CB-753F8982AFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E3CA17-760F-4C7C-A7CB-753F8982AFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E3CA17-760F-4C7C-A7CB-753F8982AFC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using RepositoryT.EntityFramework.SimpleBusiness.Entities;
+using RepositoryT.EntityFramework.SimpleBusiness.Repository;
 using RepositoryT.Infrastructure;
 
-namespace RepositoryT.EntityFramework.ConsoleSample
+namespace RepositoryT.EntityFramework.SimpleBusiness.Service
 {
     //Basic service class :) For detailed implementation look at:
     //https://github.com/ziyasal/RepositoryT.RavenDb/tree/master/RepositoryT.RavenDb.Mvc4AutofacUOWSample/SampleBase
-    public class UserService
+    public class UserService : IUserService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IUserRepository _userRepository;

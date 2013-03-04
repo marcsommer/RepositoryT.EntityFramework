@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using RepositoryT.EntityFramework.Extensions;
+using RepositoryT.EntityFramework.SimpleBusiness;
+using RepositoryT.EntityFramework.SimpleBusiness.Entities;
+using RepositoryT.EntityFramework.SimpleBusiness.Repository;
+using RepositoryT.EntityFramework.SimpleBusiness.Service;
 using RepositoryT.Infrastructure;
 
 namespace RepositoryT.EntityFramework.ConsoleSample

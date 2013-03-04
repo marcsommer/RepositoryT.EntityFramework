@@ -1,6 +1,6 @@
-﻿using RepositoryT.Infrastructure;
+using RepositoryT.Infrastructure;
 
-namespace RepositoryT.EntityFramework.ConsoleSample
+namespace RepositoryT.EntityFramework.SimpleBusiness
 {
     public class DataContextFactory : IDataContextFactory<SampleDataContext>
     {
